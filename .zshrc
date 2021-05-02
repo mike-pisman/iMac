@@ -5,10 +5,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4e33a73 (update)
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -48,11 +45,8 @@ plugins=(
 	zsh-syntax-highlighting
 )
 
-<<<<<<< HEAD
-=======
 autoload -U compinit && compinit
 
->>>>>>> 4e33a73 (update)
 source $ZSH/oh-my-zsh.sh
 
 # Alias
