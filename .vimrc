@@ -65,6 +65,8 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+" Create default mappings
+let g:NERDCreateDefaultMappings = 1
 
 " Multiline Cursor 
 let g:multi_cursor_use_default_mapping=0
@@ -79,6 +81,15 @@ let g:multi_cursor_quit_key            = '<Esc>'
 
 " Kite 
 set statusline+=%<%f\ %h%m%r%{kite#statusline()}%=%-14.(%l,%c%V%)\ %P
+" All the languages Kite supports"
+let g:kite_supported_languages = ['*']
+" For tab key completions"
+let g:kite_tab_complete=1
+set completeopt+=menuone
+set completeopt+=noselect
+set completeopt+=preview
+autocmd CompleteDone * if !pumvisible() | pclose | endif
+let g:kite_documentation_continual=1
 
 " Syntastic
 set statusline+=%#warningmsg#
