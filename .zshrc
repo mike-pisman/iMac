@@ -25,6 +25,7 @@ HYPHEN_INSENSITIVE="true"
 plugins=(
 	git
 	github
+        gitignore
 	colored-man-pages 
 	colorize 
 	autojump
